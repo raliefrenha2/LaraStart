@@ -59,7 +59,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="/img/man.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Romi Alief Rahman</a>
+        <a href="#" class="d-block">{{ Auth::user()->name }}</a>
         </div>
       </div>
 
@@ -68,23 +68,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="nav-icon fa fa-dashboard"></i>
               <p>
-                Starter Pages
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fa fa-cog"></i>
+              <p>
+                Management
                 <i class="right fa fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="#" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Active Page</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link active">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Inactive Page</p>
                 </a>
@@ -93,10 +101,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-th"></i>
+              <i class="nav-icon fa fa-user"></i>
               <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
+                Profile
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-power-off"></i>
+              <p>
+                Logout
               </p>
             </a>
           </li>
